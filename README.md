@@ -1,2 +1,1 @@
-# MathStatsCode
-Codes for my mathematical statistics course
+Codes and Jupyter-notebooks for my course of Mathematical Statistics.
