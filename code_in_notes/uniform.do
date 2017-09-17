@@ -1,7 +1,7 @@
 // file: uniform.do
 // 关闭--more--
 set more off
-// 清楚工作区内所有数据
+// 清除工作区内所有数据
 clear
 // 设置样本量
 set obs 100
