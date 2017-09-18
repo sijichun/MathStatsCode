@@ -1,3 +1,4 @@
+// check_random.do
 set more off
 clear
 set obs 1000

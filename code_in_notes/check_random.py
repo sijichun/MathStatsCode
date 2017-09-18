@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-## file: uniform.py
-
+## file: check_random.py
 import numpy as np
 import numpy.random as nprd
 # 获取序贯的1000个均匀分布随机数
