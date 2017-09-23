@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-## file: importance_sampling_beta.py
+## file: rejection_beta.py
 import numpy as np
 import numpy.random as nprd
 import scipy.special as scisp
@@ -47,4 +47,4 @@ plt.text(0.42,0.3,"Acceptance",fontsize=15,
 plt.plot(x_hline,y2,color='pink') ## 拒绝区域
 plt.text(0.38,1.5,"Rejection",fontsize=15,
     horizontalalignment="right")
-plt.savefig("importance_sampling_beta.eps")
+plt.savefig("rejection_beta.eps")
