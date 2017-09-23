@@ -10,6 +10,6 @@ x1=np.array([x[i] for i in range(1000) if i%2==1])
 # 画图
 import matplotlib.pyplot as plt
 # 设定图像大小
-plt.rcParams['figure.figsize'] = (10.0, 10.0)
+plt.rcParams['figure.figsize'] = (8.0, 5.0)
 plt.scatter(x0,x1,color='blue') ## 画出散点图
 plt.savefig("check_random_py.eps")

@@ -24,19 +24,17 @@ accept=0 #接受了多少个
 sample2=[] #结果
 # 计算参数
 lam=(c+np.sqrt(c**2+4))/2
-M=np.exp((lam**2-2*lam*c)/2)/(np.sqrt(2*np.pi)*
+M=np.exp((lam**2-2*lam*c)/2)/(np.sqrt(2*np.pi)* \
     lam*(1-scisp.ndtr(c)))
 normal_m=1/np.sqrt(2*np.pi) #正态分布密度函数前面的常数
 while accept<N:
     ## 产生指数分布
     x=-1*np.log(nprd.uniform())/lam+c
     ## 接受概率
-    r=normal_m*np.exp(-1*(x-c)**2/2)/(M*
+    r=normal_m*np.exp(-1*(x-c)**2/2)/(M* \
         lam*np.exp(-1*lam*(x-c)))
     if nprd.uniform()<r:
         sample2.append(x)
         accept=accept+1
     times=times+1
 print("接受率=",N/times)
-print(sample1)
-print(sample2)
