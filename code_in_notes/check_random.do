@@ -2,16 +2,13 @@
 set more off
 clear
 set obs 1000
-// 产生行号
-gen id=_n-1
 // 行号是奇数还是偶数
-gen group=floor(id/2)
-gen varibale_id=2*(id/2-floor(id/2))
-drop id
+gen variable_id=mod(_n,2)
+gen group=ceil(_n/2)
 // 产生序贯的随机数
 gen x=runiform()
 // 将奇数观测作为x1，偶数观测作为x0
-reshape wide x, i(group) j(varibale_id)
+reshape wide x, i(group) j(variable_id)
 // 画散点图
 scatter x1 x0 ,  graphr(fcolor(white) color(white))
 // 保存图片
