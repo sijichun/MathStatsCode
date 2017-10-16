@@ -16,7 +16,7 @@ simulate std_var=r(std_var), reps(20000): standard_normal_var
 sort std_var
 gen chi2_den=chi2den(9,std_var)
 label variable chi2_den "Chi2 Density"
-twoway (hist std_var, density)/*
-	*/ (line chi2_den std_var)/*
-	*/, graphr(fcolor(white) color(white)) xtitle("")
+twoway (hist std_var, density) ///
+       (line chi2_den std_var) ///
+		   , graphr(fcolor(white) color(white)) xtitle("")
 graph export standard_normal_var.eps, replace

@@ -27,21 +27,21 @@ sort b
 gen b_empirical=_n/_N
 gen dist_normal=normal(b)
 label variable dist_normal "Normal Distribution"
-twoway (line b_empirical b)/*
-	*/ (line dist_normal b) /*
-	*/, graphr(fcolor(white) color(white))  xtitle("") /*
-	*/saving(reg_small_b_random, replace)
+twoway (line b_empirical b) ///
+        (line dist_normal b) ///
+        , graphr(fcolor(white) color(white))  xtitle("") ///
+        saving(reg_small_b_random, replace)
 
 
 // dist. of standarized b
 sort std_b
 gen std_b_empirical=_n/_N
-gen t_den=t(2,std_b)
+gen t_den=t(`d_of_f',std_b)
 label variable t_den "t(`d_of_f') Distribution"
-twoway (line std_b_empirical std_b)/*
-	*/ (line t_den std_b) /*
-	*/, graphr(fcolor(white) color(white))  xtitle("") /*
-	*/saving(reg_small_stdb_random, replace)
+twoway (line std_b_empirical std_b) ///
+        (line t_den std_b) ///
+        , graphr(fcolor(white) color(white))  xtitle("") ///
+        saving(reg_small_stdb_random, replace)
 
 
 simulate b=r(b) std_b=r(std_b), reps(`replications'): random_b_reg, obs(`sample_size') random(0)
@@ -52,24 +52,24 @@ sort b
 gen b_empirical=_n/_N
 gen dist_normal=normal(b)
 label variable dist_normal "Normal Distribution"
-twoway (line b_empirical b)/*
-	*/ (line dist_normal b) /*
-	*/, graphr(fcolor(white) color(white))  xtitle("") /*
-	*/saving(reg_small_b_fixed, replace)
+twoway (line b_empirical b) ///
+        (line dist_normal b) ///
+        , graphr(fcolor(white) color(white))  xtitle("") ///
+        saving(reg_small_b_fixed, replace)
 
 
 // dist. of standarized b
 sort std_b
 gen std_b_empirical=_n/_N
-gen t_den=t(d_of_f,std_b)
+gen t_den=t(`d_of_f',std_b)
 label variable t_den "t(`d_of_f') Distribution"
-twoway (line std_b_empirical std_b)/*
-	*/ (line t_den std_b) /*
-	*/, graphr(fcolor(white) color(white))  xtitle("") /*
-	*/saving(reg_small_stdb_fixed, replace)
+twoway (line std_b_empirical std_b) ///
+        (line t_den std_b) ///
+        , graphr(fcolor(white) color(white))  xtitle("") ///
+        saving(reg_small_stdb_fixed, replace)
 
 
-graph combine reg_small_b_random.gph reg_small_stdb_random.gph/*
-	*/ reg_small_b_fixed.gph reg_small_stdb_fixed.gph,/*
-	*/ graphr(fcolor(white) color(white)) col(2)
-graph export reg_small.png, replace
+graph combine reg_small_b_random.gph reg_small_stdb_random.gph ///
+        reg_small_b_fixed.gph reg_small_stdb_fixed.gph, ///
+        graphr(fcolor(white) color(white)) col(2)
+graph export reg_small.eps, replace

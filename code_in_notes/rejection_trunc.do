@@ -27,14 +27,14 @@ gen selected=u<=(density/density_exp)
 sort x
 // 显示方便，散点图y轴用标准化的密度函数值乘以u
 gen u_y=u*density_exp
-twoway (hist x if selected==1, /*
-  */color(gs13) fcolor(gs13) barwidth(0.02)) /*
-  */ (line density_exp x) /*
-  */ (line density x) /*
-  */(scatter u_y x if selected==0, msize(tiny)) /*
-  */ (scatter u_y x if selected==1, msize(tiny)) /*
-  */, legend(on ring(0) pos(1) order(2 4 3 5 1) /*
-  */ label(4 "Rejected") label(5 "Accepted") /*
-  */ label(1 "Density of Accepted")) /*
-  */ graphr(fcolor(white) color(white))
+twoway (hist x if selected==1, ///
+     color(gs13) fcolor(gs13) barwidth(0.02)) ///
+     (line density_exp x) ///
+     (line density x) ///
+     (scatter u_y x if selected==0, msize(tiny)) ///
+     (scatter u_y x if selected==1, msize(tiny)) ///
+     , legend(on ring(0) pos(1) order(2 4 3 5 1) ///
+     label(4 "Rejected") label(5 "Accepted") ///
+     label(1 "Density of Accepted")) ///
+     graphr(fcolor(white) color(white))
 graph export rejection_trunc.eps, replace
