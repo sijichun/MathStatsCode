@@ -1,5 +1,5 @@
-cap program drop standard_normal_var
-program define standard_normal_var, rclass
+cap program drop std_normal_var
+program define std_normal_var, rclass
 	version 12
 	syntax [,obs(integer 10) mu(real 0) sigma(real 1)]
 	drop _all
@@ -10,7 +10,7 @@ program define standard_normal_var, rclass
 	return scalar std_var=(`obs'-1)*r(Var)/`sigma'
 end
 
-simulate std_var=r(std_var), reps(20000): standard_normal_var
+simulate std_var=r(std_var), reps(20000): std_normal_var
 
 
 sort std_var
