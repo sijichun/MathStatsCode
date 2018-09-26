@@ -12,5 +12,6 @@
 * [假设检验](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/Testing.ipynb)
 ### 《随机过程》代码
 * [泊松过程](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/Poisson_Process.ipynb)
+* [布朗运动](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/Brownian.ipynb)
 ## Julia Notebook
 * [Julia介绍](https://github.com/sijichun/MathStatsCode/blob/master/notebook_julia/Julia.ipynb)
