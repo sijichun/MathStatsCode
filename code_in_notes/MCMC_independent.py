@@ -7,7 +7,8 @@ from numpy import random as nprd
 ##设定参数
 M =10000
 pai_cons=90*np.sqrt(2)/(2*np.pi)
-pai=lambda x: pai_cons*np.exp(-90*(x[0]-0.5)**2-45*(x[1]+0.1)**2)
+pai=lambda x: pai_cons* \
+    np.exp(-90*(x[0]-0.5)**2-45*(x[1]+0.1)**2)
 domain=lambda x:(x[0]>=-1)*(x[1]>=-1)*(x[0]<=1)*(x[1]<=1)
 q=lambda y: 1/(2*np.pi)*np.exp(-1*y[0]**2/2-y[1]**2/2)
 h=lambda x: domain(x)

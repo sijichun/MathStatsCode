@@ -7,7 +7,8 @@ from numpy import random as nprd
 ##设定参数
 M =10000
 pai_cons=90*np.sqrt(2)/(2*np.pi)
-pai=lambda x: pai_cons*np.exp(-90*(x[0]-0.5)**2-45*(x[1]+0.1)**2)
+pai=lambda x: pai_cons* \
+    np.exp(-90*(x[0]-0.5)**2-45*(x[1]+0.1)**2)
 domain=lambda x:(x[0]>=-1)*(x[1]>=-1)*(x[0]<=1)*(x[1]<=1)
 h=lambda x: domain(x)
 h2=lambda x: np.sin(x[0])**2+np.log(abs(1+x[1]))
@@ -47,4 +48,3 @@ H2=list(map(h2,x))
 subH2=H2[int(M*0.2):]
 integral2=np.pi/(90*np.sqrt(2))*np.mean(subH2)
 print("Intgral2=",integral2)
-
