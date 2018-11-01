@@ -3,4 +3,4 @@
 *.eps
 *.pdf
 *.gph
-*.ipynb
+*.ipynb_*
