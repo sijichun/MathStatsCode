@@ -12,7 +12,7 @@ pai=lambda x: pai_cons* \
 domain=lambda x:(x[0]>=-1)*(x[1]>=-1)*(x[0]<=1)*(x[1]<=1)
 q=lambda y: 1/(2*np.pi)*np.exp(-1*y[0]**2/2-y[1]**2/2)
 h=lambda x: domain(x)
-h2=lambda x: np.sin(x[0])**2+np.log(abs(1+x[1]))
+h2=lambda x: np.sin(10*x[0])**2+np.log(abs(1+x[1]*10))
 #从均匀分布中采样
 def sample_q():
     return (nprd.normal(),nprd.normal())
