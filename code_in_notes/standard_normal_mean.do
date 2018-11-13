@@ -7,7 +7,7 @@ program define std_normal_mean, rclass
 	drop _all
 	set obs `obs'
 	tempvar x
-	gen `x'=`sigma'*(rnormal()+`mu')
+	gen `x'=`sigma'*rnormal()+`mu'
 	su `x'
 	return scalar mean1=sqrt(`obs')*(r(mean)-`mu')/`sigma'
 	return scalar mean2=sqrt(`obs')*(r(mean)-`mu')/r(sd)
