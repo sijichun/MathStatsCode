@@ -5,7 +5,7 @@ program define std_normal_var, rclass
 	drop _all
 	set obs `obs'
 	tempvar x
-	gen `x'=`sigma'*rnormal()+`mu's
+	gen `x'=`sigma'*rnormal()+`mu'
 	su `x'
 	return scalar std_var=(`obs'-1)*r(Var)/(`sigma'^2)
 end
