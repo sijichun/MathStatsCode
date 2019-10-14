@@ -11,6 +11,8 @@
 * [矩估计、极大似然估计与区间估计](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/estimation.ipynb)
 * [假设检验](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/Testing.ipynb)
 ### 《随机过程》代码
+
+* [马尔可夫链](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/DiscreteMarkov.ipynb)
 * [泊松过程](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/Poisson_Process.ipynb)
 * [布朗运动](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/Brownian.ipynb)
 * [蒙特卡洛](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/MonteCarlo.ipynb)
