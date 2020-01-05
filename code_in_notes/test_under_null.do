@@ -1,7 +1,7 @@
 clear
 set more off
 
-** test under H0: mu=mu0 at 5% significant level
+// test under H0: mu=mu0 at 5% significant level
 cap program drop test_normal_mean
 program define test_normal_mean, rclass
 	version 12
