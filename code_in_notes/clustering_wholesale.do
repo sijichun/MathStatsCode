@@ -7,7 +7,7 @@ import delimited "datasets/wholesale.csv"
 /* 进行聚类，使用层次聚类:
 average linkage
 angular（角度，余弦相似度）*/
-cluster averagelinkage fresh milk grocery frozen, measure(angular)
+cluster averagelinkage fresh milk grocery frozen detergents_paper delicassen, measure(angular)
 // 画图
 //cluster dendrogram, cutnumber(30)
 // 分5类
