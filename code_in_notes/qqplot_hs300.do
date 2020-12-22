@@ -11,7 +11,8 @@ local sd=r(sd)
 // 计算正态分布的quantile
 gen normal_q = `sd'*invnormal(q)+`mu'
 // 画图
-twoway (scatter retindex normal_q) (line normal_q normal_q)
+twoway (scatter retindex normal_q) /*
+    */(line normal_q normal_q), legend(off)
 graph export "qqplot_manual_hs300.eps", as(eps) replace
 // 官方命令
 qnorm retindex
