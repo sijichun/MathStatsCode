@@ -10,3 +10,4 @@ do standard_normal_var.do
 do standard_normal_mean.do
 do test_power_function.do
 do qqplot_hs300.do
+do statistic_mean.do
