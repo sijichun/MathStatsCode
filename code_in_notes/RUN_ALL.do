@@ -14,3 +14,6 @@ do statistic_mean.do
 do empirical_distribution.do
 do histogram_kdensity.do
 do charts_bar.do
+do scatter_weight_height.do
+do zipf_law.do
+do bubble_chart.do
