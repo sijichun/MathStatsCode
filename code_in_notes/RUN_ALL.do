@@ -17,3 +17,4 @@ do charts_bar.do
 do scatter_weight_height.do
 do zipf_law.do
 do bubble_chart.do
+do box_plot.do
