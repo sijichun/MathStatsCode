@@ -18,3 +18,4 @@ do scatter_weight_height.do
 do zipf_law.do
 do bubble_chart.do
 do box_plot.do
+do bootstrap_lognormal.do
