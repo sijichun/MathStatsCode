@@ -1,6 +1,7 @@
+// test_under_null.do
 clear
 set more off
-
+set seed 880505
 // test under H0: mu=mu0 at 5% significant level
 cap program drop test_normal_mean
 program define test_normal_mean, rclass
