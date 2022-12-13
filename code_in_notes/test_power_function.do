@@ -1,3 +1,4 @@
+// test_power_function.do
 clear
 set more off
 
@@ -63,4 +64,4 @@ label variable  power100 "Power 100 Samples"
 twoway (line power5 mu, lpattern(solid))/*
 	*/ (line power30 mu, lpattern(dash))/*
 	*/ (line power100 mu, lpattern(dot))
-graph export power_function.eps, replace
+graph export power_function.pdf, replace
