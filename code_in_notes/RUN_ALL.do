@@ -20,3 +20,4 @@ do bubble_chart.do
 do box_plot.do
 do bootstrap_lognormal.do
 do test_power_function.do
+do simulation_wald_test.do
