@@ -13,10 +13,10 @@ gen normal_q = `sd'*invnormal(q)+`mu'
 // 画图
 twoway (scatter retindex normal_q) /*
     */(line normal_q normal_q), legend(off)
-graph export "qqplot_manual_hs300.eps", as(eps) replace
+graph export "qqplot_manual_hs300.pdf", replace
 // 官方命令
 qnorm retindex
-graph export "qqplot_hs300.eps", as(eps) replace
+graph export "qqplot_hs300.pdf", replace
 // 直方图
 hist retindex, norm
-graph export "hist_hs300.eps", as(eps) replace
+graph export "hist_hs300.pdf", replace
