@@ -17,8 +17,7 @@ quietly{
   egen `num'=count(`varlist'), by(`_byvars')
   egen `totalincome'=total(`varlist'), by(`_byvars')
   gen `cum'=`varlist' if `rank'==1
-  by `_byvars': replace `cum'=/*
-          */  `cum'[_n-1]+`varlist'[_n] if `rank'>1
+  by `_byvars': replace `cum'=`cum'[_n-1]+`varlist'[_n] if `rank'>1
   gen `rat'=`cum'/`totalincome'
   // 计算每个个体的柱形面积
   by `_byvars': gen `rect'=`rat'/`num'
