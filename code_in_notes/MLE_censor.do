@@ -1,10 +1,8 @@
 // MLE_censor.do
-clear all
-set more off
-set seed 20221130
-// 定义极大似然目标函数
-cap program drop mle_obj_censor
-program mle_obj_censor
+clear
+// 定义目标函数
+cap program drop ml_censor_obj
+program ml_censor_obj
 	args lnfj theta1 theta2
 	tempvar lnx
 	quietly{
@@ -14,12 +12,12 @@ program mle_obj_censor
 		replace `lnfj'=log(1-normal((4-`theta1')/sqrt(`theta2'))) if `lnx'==4
 	}
 end
-// 极大似然估计
+// 进行极大似然估计
 cap program drop mle_censor
 program mle_censor, eclass
 	syntax varlist(max=1)
 	quietly{
-		ml model lf mle_obj_censor (mu: `varlist'=, freeparm) /sigma2
+		ml model lf ml_censor_obj (mu: `varlist'=, freeparm) /sigma2
 		ml search
 		noisily: ml maximize
 		mat b=e(b)
@@ -27,6 +25,7 @@ program mle_censor, eclass
 		ereturn post b V
 	}
 end
-// 简单展示
-dgp_mle_censor x, obs(800) mu(3.2) sigma2(0.5)
+
+set seed 8855
+dgp_mle_censor x, obs(500) mu(3.3) sigma2(1)
 mle_censor x

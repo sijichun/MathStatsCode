@@ -11,6 +11,6 @@ program dgp_mle_censor
 		gen `x'= `xstar' if `xstar'<4 & `xstar'>3
 		replace `x'=4 if `xstar'>=4
 		replace `x'=3 if `xstar'<=3
-		gen `varlist'=exp(`x'*log(10))
+		gen `varlist'=10^`x'
 	}
 end
