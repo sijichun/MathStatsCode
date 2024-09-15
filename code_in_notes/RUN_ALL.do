@@ -21,5 +21,8 @@ do box_plot.do
 do bootstrap_lognormal.do
 do test_power_function.do
 do simulation_wald_test.do
+do simulation_lm_test.do
+do simulation_lm_ols_test.do
+do simulation_lr_test.do
 do GMM_mini_chi2.do
 do dgp_mle_censor_simulate.do
