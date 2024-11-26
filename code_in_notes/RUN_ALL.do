@@ -14,6 +14,7 @@ do qqplot_hs300.do
 do statistic_mean.do
 do empirical_distribution.do
 do simulate_LLN.do
+do simulate_CLT.do
 do histogram_kdensity.do
 do charts_bar.do
 do scatter_weight_height.do
