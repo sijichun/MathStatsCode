@@ -12,4 +12,4 @@ reshape wide x, i(group) j(variable_id)
 // 画散点图
 scatter x1 x0 ,  graphr(fcolor(white) color(white))
 // 保存图片
-graph export check_random_stata.eps, replace
+graph export check_random_stata.pdf, replace
