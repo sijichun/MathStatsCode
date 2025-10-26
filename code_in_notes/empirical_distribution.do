@@ -1,16 +1,15 @@
 // empirical_distribution.do
-clear
-use datasets/cfps_adult.dta
-drop if qp101<0
+use datasets/chfs_ind.dta, clear
+// 生成对数变量
+gen log_income=log10(labor_inc)
 // 排序
-sort qp101
-// 生成排序序号
-// 注意qp101中有缺失值，这里不删除缺失值，但是在计算时将其排除
-gen notmissing_qp101=qp101~=.
-qui: su notmissing_qp101
-gen rank_qp101=_n/r(sum)
+sort log_income
+// 生成排序序号，注意处理可能的缺失值
+gen notmissing=log_income~=.
+qui: su notmissing
+gen cum_log_income=_n/r(sum) if notmissing
 // 画图
-qui: su qp101, de
-local median_qp101=r(p50)
-line rank_qp101 qp101, xline(`median_qp101')
+qui: su log_income, de
+local median_log_income=r(p50)
+line cum_log_income log_income, xline(`median_log_income', lp(dot)) yline(0.5, lp(dot))
 graph export empirical_distribution.pdf, replace
