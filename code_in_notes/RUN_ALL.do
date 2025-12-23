@@ -30,3 +30,4 @@ do simulation_lm_ols_test.do
 do simulation_lr_test.do
 do GMM_mini_chi2.do
 do dgp_mle_censor_simulate.do
+do bayes_lambda_gamma.do
