@@ -1,5 +1,5 @@
 // descriptive_mode.do
-use datasets/chfs_hh.dta, clear
+use ../datasets/chfs_hh.dta, clear
 su total_consump
 local min_total_consump=r(min)
 local max_total_consump=r(max)

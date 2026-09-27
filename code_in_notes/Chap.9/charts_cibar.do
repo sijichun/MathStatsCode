@@ -1,5 +1,5 @@
 // charts_cibar.do
-use datasets/chfs_ind.dta, clear
+use ../datasets/chfs_ind.dta, clear
 label def sex 1 "男"
 label def sex 2 "女", add
 label values a2003 sex

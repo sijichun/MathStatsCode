@@ -1,6 +1,6 @@
 // qqplot.do
 clear
-use datasets/hs300index.dta
+use ../datasets/hs300index.dta
 // 计算quantile，为了避免出现0和1，减去了0.5
 sort retindex
 gen q=(_n-0.5)/_N

@@ -1,5 +1,5 @@
 // charts_bar.do
-use datasets/chfs_ind.dta, clear
+use ../datasets/chfs_ind.dta, clear
 label def education 1 "文盲"
 label def education 2 "小学", add
 label def education 3 "初中", add

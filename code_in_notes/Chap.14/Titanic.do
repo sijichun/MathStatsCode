@@ -1,6 +1,6 @@
 // Titanic.do
 clear all
-use datasets/titanic.dta
+use ../datasets/titanic.dta
 // 按照性别加总
 collapse (sum)num_aboard (sum)num_death, by(sex)
 // 计算幸存人数

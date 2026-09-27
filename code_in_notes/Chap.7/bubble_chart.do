@@ -1,6 +1,6 @@
 // bubble_chart.do
 clear
-use datasets/citydata.dta
+use ../datasets/citydata.dta
 keep if Year==2011
 // 省份代码、判断东中西部
 gen prov=floor(CityCode/10000)

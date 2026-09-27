@@ -32,6 +32,6 @@ quietly{
 }
 end
 
-use "cfps_family_econ.dta", clear
+use "../datasets/cfps_family_econ.dta", clear
 ginindex fincome1, gen(gini_all)
 bysort provcd14: ginindex fincome1, gen(gini)

@@ -1,6 +1,6 @@
 // bootstrap_student.do
 clear all
-use datasets/OHIE_QJE.dta
+use ../datasets/OHIE_QJE.dta
 // bootstrap
 bootstrap b=_b[treatment] se=_se[treatment], reps(200) seed(55) cluster(household_id) saving(bootstrap_student.dta, replace): reg birthyear_list treatment, vce(bootstrap)
 // 进行回归，保存系数和标准误

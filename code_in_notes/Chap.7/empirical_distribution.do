@@ -1,5 +1,5 @@
 // empirical_distribution.do
-use datasets/chfs_ind.dta, clear
+use ../datasets/chfs_ind.dta, clear
 // 生成对数变量
 gen log_income=log10(labor_inc)
 // 排序

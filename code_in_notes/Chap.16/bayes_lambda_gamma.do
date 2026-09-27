@@ -23,6 +23,6 @@ forvalues a=5(0.03)15{
 		di "." _continue
 	}
 }
-gen scatter_label="(10.49, 25.2)" if _n==143408
+frame posterior: gen scatter_label="(10.49, 25.2)" if _n==143408
 frame posterior: twoway (contourline posterior b a, levels(15)) (scatter b a if _n==143408, mlabel(scatter_label))
 graph export bayes_lambda_gamma.pdf, replace

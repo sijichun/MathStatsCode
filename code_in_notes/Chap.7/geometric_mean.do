@@ -1,5 +1,5 @@
 // geometric_mean.do
-use datasets/hs300index.dta, clear
+use ../datasets/hs300index.dta, clear
 // 按照时间排序，用行号作为新的时间
 sort day
 gen t=_n

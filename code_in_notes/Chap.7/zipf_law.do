@@ -1,6 +1,6 @@
 // zipf_law.do
 clear
-use datasets/citydata.dta
+use ../datasets/citydata.dta
 keep if Year==2011
 sort v87
 gen rank=_N-_n+1

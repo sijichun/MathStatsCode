@@ -1,5 +1,5 @@
 // box_plot.do
-use datasets/chfs_ind.dta, clear
+use ../datasets/chfs_ind.dta, clear
 // 生成对数变量
 gen log_income=log10(labor_inc)
 label variable log_income "对数收入"

@@ -1,6 +1,6 @@
 // Benford.do
 clear all
-use datasets/citydata.dta
+use ../datasets/citydata.dta
 keep if Year==2011
 
 // 将GDP转为字符串
