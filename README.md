@@ -5,16 +5,16 @@
 ## Python Notebook
 除讲义中的代码以外，本课程还提供一些Jupyter Notebook。这些Notebooks可以作为编程作业的参考：
 ### 《数理统计》代码
-* [Numpy+Matplotlib+random 介绍](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/Numpy%2BMatplotlib%2Brandom.ipynb)
-* [生成多元正态分布](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/Normal.ipynb)
-* [大数定律与中心极限定律](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/LLN_CLT.ipynb)
-* [矩估计、极大似然估计与区间估计](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/estimation.ipynb)
-* [假设检验](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/Testing.ipynb)
+* [Numpy+Matplotlib+random 介绍](https://github.com/sijichun/MathStatsCode/blob/master/code_in_python/Numpy%2BMatplotlib%2Brandom.ipynb)
+* [生成多元正态分布](https://github.com/sijichun/MathStatsCode/blob/master/code_in_python/Normal.ipynb)
+* [大数定律与中心极限定律](https://github.com/sijichun/MathStatsCode/blob/master/code_in_python/LLN_CLT.ipynb)
+* [矩估计、极大似然估计与区间估计](https://github.com/sijichun/MathStatsCode/blob/master/code_in_python/estimation.ipynb)
+* [假设检验](https://github.com/sijichun/MathStatsCode/blob/master/code_in_python/Testing.ipynb)
 ### 《随机过程》代码
 
-* [马尔可夫链](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/DiscreteMarkov.ipynb)
-* [泊松过程](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/Poisson_Process.ipynb)
-* [布朗运动](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/Brownian.ipynb)
-* [蒙特卡洛](https://github.com/sijichun/MathStatsCode/blob/master/notebook_python/MonteCarlo.ipynb)
+* [马尔可夫链](https://github.com/sijichun/MathStatsCode/blob/master/code_in_python/DiscreteMarkov.ipynb)
+* [泊松过程](https://github.com/sijichun/MathStatsCode/blob/master/code_in_python/Poisson_Process.ipynb)
+* [布朗运动](https://github.com/sijichun/MathStatsCode/blob/master/code_in_python/Brownian.ipynb)
+* [蒙特卡洛](https://github.com/sijichun/MathStatsCode/blob/master/code_in_python/MonteCarlo.ipynb)
 ## Julia Notebook
 * [Julia介绍](https://github.com/sijichun/MathStatsCode/blob/master/notebook_julia/Julia.ipynb)

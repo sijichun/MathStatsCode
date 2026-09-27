@@ -14,12 +14,14 @@ foreach N in 2 3 4 10 100 1000{
 	frame create mean`N' m
 	frame mean`N': label variable m "样本均值"
 	forvalues j=1/2000{
-		clear
-		set obs `N'
-		gen d=runiform()>=0.5
-		gen x=d*rnormal(3,1)+(1-d)*rnormal(-3,1)
-		su x
-		frame post mean`N' (r(mean))
+		qui{
+            clear
+    	    set obs `N'
+    	    gen d=runiform()>=0.5
+    	    gen x=d*rnormal(3,1)+(1-d)*rnormal(-3,1)
+    	    su x
+    	    frame post mean`N' (r(mean))
+        }
 	}
 	frame mean`N': hist m, normal saving(simulate_CLT`N', replace) title("N=`N'")
 	local graphs "`graphs' simulate_CLT`N'.gph"
