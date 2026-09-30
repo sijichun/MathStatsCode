@@ -32,6 +32,8 @@ quietly{
 }
 end
 
-use "../datasets/cfps_family_econ.dta", clear
-ginindex fincome1, gen(gini_all)
-bysort provcd14: ginindex fincome1, gen(gini)
+use "../datasets/chfs2017_hh", clear
+ginindex total_income, gen(gini_all)
+sort total_income
+gen percent = ceil(_n/_N*9)
+bysort percent: ginindex total_income, gen(gini)

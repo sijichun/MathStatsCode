@@ -1,7 +1,7 @@
 // GMM_Poisson.do
 clear all
 set more off
-set seed 20231130
+set seed 20250211
 cap program drop est_lambda
 program est_lambda, eclass
 	syntax varlist(max=1) [, lambda(real 1)]
