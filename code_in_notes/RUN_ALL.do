@@ -31,6 +31,7 @@ do scatter_consump.do
 do zipf_law.do
 do bubble_chart.do
 do box_plot.do
+do descriptive_income_and_log.do
 
 ** Chap.8 大样本理论
 cd "`root'/Chap.8"
