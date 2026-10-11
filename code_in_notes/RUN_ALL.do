@@ -68,9 +68,14 @@ do qqplot_hs300.do
 ** Chap.15 Bootstrap方法
 cd "`root'/Chap.15"
 do bootstrap_lognormal.do
+do bootstrap_htest.do
 
 ** Chap.16 贝叶斯方法
 cd "`root'/Chap.16"
 do bayes_lambda_gamma.do
+
+** Chap.17 经验贝叶斯与收缩估计量
+cd "`root'/Chap.17"
+do empirical_bayes_poisson_gamma.do
 
 cd "`root'"

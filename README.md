@@ -7,13 +7,13 @@
 ```
 MathStatsCode/
 ├── code_in_notes/    # 讲义中的 Stata 代码（按章节整理）
-├── notebook/         # 在 Jupyter 中使用 Stata 的教学 Notebook（PyStata）
+├── notebooks/        # 在 Jupyter 中使用 Stata 的教学 Notebook（PyStata）
 └── code_in_python/   # Python 教学/作业参考 Notebook
 ```
 
 ## 讲义中的 Stata 代码
 
-讲义中的代码主要包含在以下地址中：[Code in Notes](https://github.com/sijichun/MathStatsCode/tree/master/code_in_notes)，按讲义章节整理为子文件夹（`Chap.n` 对应讲义第 n 章，另含 `Appendix.B`、`Chap.MCMC` 等），Stata 数据文件包含在以下地址中：[Datasets](https://github.com/sijichun/MathStatsCode/tree/master/code_in_notes/datasets)。
+讲义中的代码主要包含在以下地址中：[Code in Notes](https://github.com/sijichun/MathStatsCode/tree/master/code_in_notes)，按讲义章节整理为子文件夹（`Chap.n` 对应讲义第 n 章，另含 `Appendix.B`、`Unused` 等），Stata 数据文件包含在以下地址中：[Datasets](https://github.com/sijichun/MathStatsCode/tree/master/code_in_notes/datasets)。
 
 * 每个章节子文件夹中为讲义中展示的 `.do` 文件，运行后在同目录下生成讲义所使用的图形；
 * [RUN_ALL.do](https://github.com/sijichun/MathStatsCode/blob/master/code_in_notes/RUN_ALL.do) 可依次运行全部章节的示例代码；
@@ -21,7 +21,7 @@ MathStatsCode/
 
 ## Stata 教学 Notebook（PyStata）
 
-[Notebook](https://github.com/sijichun/MathStatsCode/tree/master/notebook) 目录提供了与 `code_in_notes` 章节结构一一对应的 Jupyter Notebook：在 Jupyter 中通过 PyStata 直接运行讲义中的 Stata 代码，每个代码单元均配有详细讲解，适合课堂演示与自学。
+[Notebook](https://github.com/sijichun/MathStatsCode/tree/master/notebooks) 目录提供了与 `code_in_notes` 章节结构一一对应的 Jupyter Notebook：在 Jupyter 中通过 PyStata 直接运行讲义中的 Stata 代码，每个代码单元均配有详细讲解，适合课堂演示与自学。
 
 * 环境安装与使用方法见：[PyStata.md](https://github.com/sijichun/MathStatsCode/blob/master/notebook/PyStata.md)；
 * Notebook 中省略了 `graph export` 导出命令（导出保留在 `.do` 文件中），图形直接在 Notebook 中内联显示。
