@@ -29,6 +29,7 @@ X=pd.DataFrame()
 for x in x_var_name:
     X[x]=stata2numpy(x)
 print(X)
+
 from sklearn import tree
 dtree=tree.DecisionTreeClassifier(max_depth=10) ##设定最大深度
 dtree.fit(X,y) ##训练
