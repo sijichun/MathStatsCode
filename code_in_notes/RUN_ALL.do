@@ -37,6 +37,7 @@ do descriptive_income_and_log.do
 cd "`root'/Chap.8"
 do simulate_LLN.do
 do simulate_CLT.do
+do nlcom_exp_mean.do
 
 ** Chap.9 点估计和区间估计
 cd "`root'/Chap.9"
