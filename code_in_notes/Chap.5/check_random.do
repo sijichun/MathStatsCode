@@ -2,6 +2,7 @@
 set more off
 clear
 set obs 1000
+set seed 890907
 // 行号是奇数还是偶数
 gen variable_id=mod(_n,2)
 gen group=ceil(_n/2)

@@ -8,7 +8,7 @@ scalar c=3
 // 计算lambda和M
 scalar pi=3.1415926
 scalar temp_cons=sqrt(2*pi)*(1-normal(c))
-scalar lam=2.5 // scalar lam=(c+sqrt(c^2+4))/2
+scalar lam=4 // scalar lam=(c+sqrt(c^2+4))/2
 scalar M=(exp(lam^2/2-lam*c-log(lam)))/temp_cons
 // 产生均匀分布和指数分布
 gen x=c-log(runiform())/lam
