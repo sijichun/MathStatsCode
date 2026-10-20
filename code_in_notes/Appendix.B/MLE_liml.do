@@ -19,13 +19,10 @@ program limlobj
 		scalar `sigma1'=r(sd)
 		su `resid2'
 		scalar `sigma2'=r(sd)
-		replace `lnfj'=-log(`sigma1')-log(`sigma2') /*
-			*/-`resid1'^2/(`sigma1'^2*2) /*
-			*/-`resid2'^2/(`sigma2'^2*2)
+		replace `lnfj'=-log(`sigma1')-log(`sigma2') - `resid1'^2/(`sigma1'^2*2) /- `resid2'^2/(`sigma2'^2*2)
 		if (`todo'==0) exit
 		replace `g1'=1/(`sigma1'^2)*`resid1'
-		replace `g2'=-1/(`sigma1'^2)*`resid1'*`theta3'/*
-			*/+1/(`sigma2'^2)*`resid2'
+		replace `g2'=-1/(`sigma1'^2)*`resid1'*`theta3'+1/(`sigma2'^2)*`resid2'
 		replace `g3'=1/(`sigma1'^2)*`resid1'*`resid2'	
 	}
 end
@@ -36,14 +33,12 @@ program liml, eclass
 	// endo: 内生变量，至多一个
 	// instru: 工具变量，control：控制变量
 	// endofunc: 内生变量的函数
-	syntax varlist(max=1), endo(varlist max=1) /*
-		*/ instru(varlist) control(varlist) [endofc(varlist)]
+	syntax varlist(max=1), endo(varlist max=1) instru(varlist) control(varlist) [endofc(varlist)]
 	tempname dep x z b0 b1 initb
 	local `dep' "`varlist'"
 	local `x' "`endo' `endofc' `control'"
 	local `z' "`instru' `control'"
-	ml model lf1 limlobj (Structual:``dep'' = ``x'') /*
-		*/ (First_stage:`endo' = ``z'') /rho
+	ml model lf1 limlobj (Structual:``dep'' = ``x'') (First_stage:`endo' = ``z'') /rho
 	quietly{ //使用最小二乘估计作为初始值
 		reg ``dep'' ``x''
 		mat `b0'=e(b)

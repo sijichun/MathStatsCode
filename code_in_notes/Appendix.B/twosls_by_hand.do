@@ -2,8 +2,7 @@
 cap program drop twosls
 program twosls, eclass
 	version 15.0
-	syntax varlist(max=1), endo(varlist) instru(varlist) /*
-		*/control(varlist)
+	syntax varlist(max=1), endo(varlist) instru(varlist) control(varlist)
 	tempname dep Xhat XhhX pred_endo pred_var b sigma2 V
 	tempvar resid
 	local `dep' "`varlist'"
